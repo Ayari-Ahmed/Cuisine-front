@@ -15,6 +15,8 @@ const Login = () => {
     e.preventDefault();
     console.log("E: ", username);  // Debug line
     
+
+    
     try {
       const response = await loginUser(username, password);
       console.log('Login response:', response); // Debug line
