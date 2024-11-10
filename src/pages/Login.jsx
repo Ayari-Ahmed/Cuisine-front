@@ -23,8 +23,9 @@ const Login = () => {
   
       if (response.token) {
         console.log('Token received:', response.token);
-        localStorage.setItem('token', response.token);
-        navigate('/'); 
+      await  localStorage.setItem('token', response.token);
+      window.location.href="/"  
+      // navigate('/'); 
       }
     } catch (error) {
       console.error("Login failed:", error);
